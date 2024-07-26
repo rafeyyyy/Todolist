@@ -25,7 +25,7 @@ form.addEventListener("submit", (event) => {
         
         
     
-        location.href = `${window.origin}/Todolist/`
+        location.href = window.location.href
     }
 });
 
@@ -64,7 +64,7 @@ todo.forEach((todos) => {
             
             localStorage.setItem("todoList", JSON.stringify(todo))
             
-            location.href = location.href = `${window.origin}/Todolist/`; 
+            location.href = window.location.href; 
             
         });
     });
@@ -73,7 +73,6 @@ todo.forEach((todos) => {
     let ulcheckBox = ul.querySelectorAll("li .toggle-delete .todo-checked");
     
     Array.from(ulcheckBox).forEach((check, index) => {
-        console.log(check.name);
         check.addEventListener("click", () => {
             if (check.checked) {
                 ul.querySelectorAll("li")[index].classList.add("completed")
