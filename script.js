@@ -25,7 +25,7 @@ form.addEventListener("submit", (event) => {
         
         
     
-        location.href = window.origin
+        location.href = `${window.origin}/Todolist/`
     }
 });
 
@@ -64,7 +64,7 @@ todo.forEach((todos) => {
             
             localStorage.setItem("todoList", JSON.stringify(todo))
             
-            location.href = window.origin; 
+            location.href = location.href = `${window.origin}/Todolist/`; 
             
         });
     });
